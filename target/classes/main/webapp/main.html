@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/lib/sea.js"
+            data-config="seajs-config.js" data-main="seajs-bootstrap.js"></script>
+</head>
+<body>
+<div id="login">
+    <form class="login_container" ts-type="tmpl"
+          onsubmit="$ts.submit('cmbc.main.login',{target:this})">
+        <div class="login_back">
+            <div class="login_panel">
+                <div class="login_box">
+                    <h1>
+                        <span class="systemName"></span>
+                    </h1>
+                    <ul class="login_form">
+                        <li>
+                            <p>用户名：</p> <input type="text" id="userId" name="userId"
+                                               class="username" value="taicang" />
+                        </li>
+                        <li>
+                            <p>密码：</p>
+                        <li><input type="password" name="password" class="pass"
+                                   value="666666"></li>
+
+                        <li style="line-height: 60px;"><input type="submit"
+                                                              ts-submit="y" value="登录" class="login_sub" /></li>
+                        <li class="version"
+                            style="color: #EE5258; font-weight: bold; line-height: 30px">${clientData.systemVersion}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="frame" class="bt" style="display: none;">
+    <div id="frame_top_bar">
+        <span class="page_logo">  &nbsp;&nbsp; | &nbsp;&nbsp;  <span class="systemName"></span></span>
+        <ul class="top_tip">
+            <li><span class="page_logo" style="background: none;font-weight:normal;"><span class="frameTopBarOrgName"></span></span></li>
+            <li><img src="img/icon-shezhi.png"> <a id="frameTopBarModifyUserInfo" href="#">修改个人信息</a>
+            </li>
+            <li><img src="img/icon-shezhi.png"> <a id="frameTopBarModifyUserPwd" href="#">修改密码</a>
+            </li>
+            <li><img src="img/icon-tuichu.png"> <a href="">退出</a></li>
+        </ul>
+    </div>
+    <div id="frame_side_container">
+        <div id="frame_side">
+            <div class="side-container">
+                <div id="userBox">
+                </div>
+                <div ts-type="view" ts-view="cmbc.side.sideMenu"
+                     ts-model="{model:model}"></div>
+            </div>
+            <div id="sideToggle">
+                <img src="img/hideSideIcon.png" />
+            </div>
+        </div>
+        <img id="tesla_logo" src="img/tesla-logo.jpg" width="80px" height="50px" style="position: absolute; bottom: 35px; left: 30px;"/>
+    </div>
+    <div id="frame_right">
+        <div id="frame_top">
+            <div class="tabs">
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <div id="frame_main"></div>
+    </div>
+    <div id="footer" style="width: 100%;">
+        <div id="sysVersion"
+             style="display: inline-block; float: right; width: 100%; text-align: center;">
+        </div>
+
+    </div>
+    <div id="tabMenu">
+        <div id="tabTool">
+            <div id="menu_close_all" class="tab-menu-item">
+                <div class="menu-item-container">
+                    <img src="img/cg/menu_close_all.png" /> <span>关闭全部</span>
+                </div>
+            </div>
+        </div>
+        <div class="tab-menu-split"></div>
+        <div id="tabList"></div>
+    </div>
+</div>
+</body>
+</html>

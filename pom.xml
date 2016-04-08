@@ -130,6 +130,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.sitemesh</groupId>
+            <artifactId>sitemesh</artifactId>
+            <version>3.0.1</version>
+        </dependency>
     </dependencies>
 
 

@@ -1,9 +1,6 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: zzp
-  Date: 2016/4/7
-  Time: 21:37
-  To change this template use File | Settings | File Templates.
+  Created by zzp
+  Date: 2016/4/7 21:37
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

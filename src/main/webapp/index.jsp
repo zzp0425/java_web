@@ -86,10 +86,10 @@
         <h1 align="center">The zzp world!</h1>
         <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <p align="center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        <p><%=request.getContextPath() %></p>
     </div>
 </div>
 <sitemesh:write property='body' />
-
 <script src="<%=request.getContextPath() %>/js/jquery.min.js"></script>
 <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
 </body>

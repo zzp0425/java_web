@@ -17,6 +17,7 @@
 
     <!-- Bootstrap -->
     <link href="<%=request.getContextPath() %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=request.getContextPath() %>/css/extend.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +27,7 @@
     <![endif]-->
 </head>
 <body>
-<nav class="navbar navbar-inverse container">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -77,16 +78,42 @@
     </div><!-- /.container-fluid -->
 </nav>
 <!-- 导航 -->
-
-<div class="jumbotron">
-    <div class="container">
-        <h1 align="center">The zzp world!</h1>
-        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <p align="center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+<div class="row">
+    <div class="col-md-2">
+        <div class="module">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="##">Home</a></li>
+            <li><a href="##">CSS3</a></li>
+            <li><a href="##">Sass</a></li>
+            <li><a href="##">jQuery</a></li>
+            <li class="disabled"><a href="##">Responsive</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <%--<div class="jumbotron">--%>
+            <%--<div class="">--%>
+                <%--<h1 align="center">The zzp world!</h1>--%>
+                <%--<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>--%>
+                <%--<p align="center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <sitemesh:write property='body' />
+    </div>
+    <div class="col-md-1">
+        <span>周振平</span>
     </div>
 </div>
-<sitemesh:write property='body' />
+
+
 <script src="<%=request.getContextPath() %>/bootstrap/js/jquery.min.js"></script>
 <script src="<%=request.getContextPath() %>/bootstrap/js/bootstrap.min.js"></script>
+<hr>
+<div class="row footer-bottom">
+    <ul class="list-inline text-center">
+        <li>版权所有&copy;zzp</li>
+        <li>2016-04-10 Version:1.0.0</li>
+    </ul>
+</div>
 </body>
 </html>

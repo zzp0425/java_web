@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component LANGUAGE_LEVEL="JDK_1_5" jdk="1.7" jdk_type="JavaSDK">
+<component LANGUAGE_LEVEL="JDK_1_5" jdk="1.8" jdk_type="JavaSDK">
 	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
 	<contentEntry url="file://$MODULE_DIR$">
-		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
-		<testFolder url="file://$MODULE_DIR$/src/test/resources"/>
 		<excludeFolder url="file://$MODULE_DIR$/target"/>
 	</contentEntry>
 	<lib name="Maven: junit:junit:4.12" scope="TEST"/>
@@ -13,10 +11,10 @@
 		<level name="Maven: commons-logging:commons-logging:1.1.1" value="project"/>
 		<level name="Maven: org.springframework:spring-context:3.2.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework:spring-aop:3.2.2.RELEASE" value="project"/>
-		<level name="Maven: aopalliance:aopalliance:1.0" value="project"/>
 		<level name="Maven: org.springframework:spring-beans:3.2.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework:spring-expression:3.2.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework:spring-web:3.2.2.RELEASE" value="project"/>
+		<level name="Maven: aopalliance:aopalliance:1.0" value="project"/>
 		<level name="Maven: org.springframework:spring-webmvc:3.2.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework:spring-test:3.2.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework:spring-tx:3.2.2.RELEASE" value="project"/>

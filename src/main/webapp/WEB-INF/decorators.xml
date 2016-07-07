@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>
+        <pattern>/index.jsp</pattern>
+    </excludes>
+    <!--<decorator name="common" page="common.ftl">-->
+        <!--<pattern>/*</pattern>-->
+    <!--</decorator>-->
+    <decorator name="index" page="/index.jsp">
+        <pattern>**/*.jsp</pattern>
+    </decorator>
+</decorators>

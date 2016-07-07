@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemesh>
     <!-- 指明满足“/*”的页面，将被“/tpl/index.jsp”所装饰 -->
-    <mapping path="/*" decorator="/index.jsp" />
+    <property name="decorators-file" value="/WEB-INF/decorators.xml"/>
 
-    <!-- 指明满足“/exclude.jsp*”的页面，将被排除，不被装饰 -->
-    <mapping path="/index.jsp*" exclue="true" />
+    <excludes file="${decorators-file}"/>
+
+    <decorator-mappers>
+        <mapper class="com.opensymphony.module.sitemesh.mapper.ConfigDecoratorMapper">
+            <param name="config" value="${decorators-file}"/>
+        </mapper>
+    </decorator-mappers>
 </sitemesh>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.mapper.CommonConfigMapper">
+
+    <!-- 根据条件查询产品列表 -->
+    <select id="queryItemsByCondition" parameterType="java.lang.String" resultType="map">
+        SELECT
+          CC.COMMON_CONFIG_ID AS "configId",
+          CC.CONFIG_NAME AS "name",
+          CC.DESCRIPTION AS "desc",
+          CCI.COMMON_CONFIG_ITEM_ID AS "itemId",
+          CCI.ITEM_KEY AS "key",
+          CCI.ITEM_VALUE AS "value",
+          CCI.DESCRIPTION AS "itemDesc",
+          CCI.SEQ AS "seq"
+        FROM COMMON_CONFIG CC
+        LEFT JOIN COMMON_CONFIG_ITEM CCI
+        ON CC.COMMON_CONFIG_ID = CCI.COMMON_CONFIG_ID
+        WHERE 1 = 1
+        <if test="configId != null and configId.length() > 0">
+            AND CC.COMMON_CONFIG_ID = #{configId,jdbcType=VARCHAR}
+        </if>
+        <if test="name != null and name.length() > 0">
+            AND CC.CONFIG_NAME LIKE #{name,jdbcType=VARCHAR}
+        </if>
+    </select>
+</mapper>
